@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Registration Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen flex-col">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h2 class="text-2xl font-bold mb-6 text-center">Registration Form</h2>
+        <form id="registrationForm">
+
+            <!-- entry for the name -->
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-medium">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter full name" class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-green-500 focus:outline-none" required>
+            </div>
+
+            <!--entry for email -->
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-medium">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email" class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-green-500 focus:outline-none" required>
+            </div>
+
+            <!--entry for the password -->
+            <div class="mb-4">
+                <label for="password" class="block text-gray-700 font-medium">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-green-500 focus:outline-none" required>
+            </div>
+
+            <!--entry for date of birth -->
+            <div class="mb-4">
+                <label for="dob" class="block text-gray-700 font-medium">Date of Birth</label>
+                <input type="date" id="dob" name="dob" class="w-full mt-2 p-3 border border-gray-300 rounded-lg focus:ring focus:ring-green-500 focus:outline-none" required>
+            </div>
+
+            <!--checkbox for terms & conditions-->
+            <div class="mb-6">
+                <label class="inline-flex items-center">
+                    <input type="checkbox" id="terms" name="terms" class="form-checkbox h-5 w-5 text-green-600" required>
+                    <span class="ml-2 text-gray-700">Accept Terms & Conditions</span>
+                </label>
+            </div>
+
+            <!--button for submission-->
+            <button type="submit" class="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition duration-300">Submit</button>
+        </form>
+    </div>
+
+    <!--table for diplaying the submitted entries-->
+    <div class="mt-8 max-w-2xl w-full pb-12 flex justify-center"> 
+        <div class="w-full"> 
+            <h2 class="text-2xl font-bold mb-4 text-center">Submitted Entries</h2>
+            <table class="table-auto w-full bg-white shadow-lg rounded-lg overflow-hidden">
+                <thead>
+                    <tr class="bg-green-500 text-white">
+                        <th class="p-4"> Name</th>
+                        <th class="p-4">Email</th>
+                        <th class="p-4">Password </th>
+                        <th class="p-4">Dob </th>
+                        <th class="p-4">Accepted terms?</th>
+                    </tr>
+                </thead>
+                <tbody id="entriesTable">
+                    <!--entries will be added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--link fr the js file-->
+    <script src="index.js"></script>
+</body>
+</html>
